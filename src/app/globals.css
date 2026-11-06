@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+}
+
+html,
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Evita zoom automático do iOS ao focar em campos */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+.pb-nav {
+  padding-bottom: calc(5.5rem + var(--safe-bottom));
+}
